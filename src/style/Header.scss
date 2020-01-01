@@ -1,0 +1,214 @@
+form {
+    label {
+    &.text {
+        letter-spacing: 0.1rem;
+
+        margin: {
+            left: 10vw;
+        }
+
+        padding: {
+            bottom: 20px;
+
+        }
+
+        input {
+            font: {
+                size: 20px;
+            }
+
+            border: {
+                width: 4px;
+                color: #5B249E;
+            }
+
+            border: {
+                radius: 5px;
+            }
+
+            width:50%;
+        }
+    }
+}
+label {
+
+&.checkbox {
+    margin-left: 10px;
+
+    input {
+        display: none; 
+      }
+      
+     
+     span {
+        height: 18px;
+        width: 18px;
+        border: {
+            width: 4px;
+            style: solid;
+            color: #5B249E;
+        }
+
+        border: {
+            radius: 5px;
+        }
+       
+        display: inline-block;
+        position: relative;
+        left: 10px;
+        top: 5px;
+      }
+      
+      [type=checkbox]:checked + span:before {
+        content: '\2714';
+        position: absolute; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+}
+    label {
+
+    &.date {
+        letter-spacing: 0.1rem;
+        display: block;
+
+        text: {
+            align: center;
+        }
+
+        margin: {
+            bottom: 20px;
+            top: 20px;
+        }
+
+        input {
+            font: {
+                size: 20px;
+            }
+
+            border: {
+                width: 4px;
+                color: #5B249E;
+            }
+
+            border: {
+                radius: 5px;
+            }
+        }
+    }
+    }
+    button {
+
+    &.buttonform {
+        font: {
+            size: 20px;
+        }
+
+        display: block;
+        width: 100px;
+        margin: 0 auto;
+
+        border: {
+            width: 4px;
+            color: #5B249E;
+        }
+
+        border: {
+            radius: 5px;
+        }
+    }
+}
+}
+
+
+
+@media (min-width: 1440px) {
+    form {
+        label {
+
+        &.text {
+           display: inline-block;
+           width: 50%;
+           margin: 0 5% 0;
+        }
+    }
+        label {
+
+        &.checkbox {
+           display: inline-block;
+           width: 30%;
+margin: 0 5% 0;
+        }
+    }
+}
+}
+@media (max-width: 1023px) {
+    form {
+        label {
+
+        &.text {
+
+           display: block;
+       
+        }
+    }
+        label {
+
+        &.checkbox {
+           display: block;
+           text-align: center;
+        
+    }
+
+
+}}
+}
+@media (max-width: 426px) {
+    form {
+        label {
+
+        
+        &.text {
+            display: block;
+           
+            margin: {
+                left: 0;
+                
+            }
+            text: {
+                align: center;
+        }
+        input {
+            display: block;
+            width: 50%;
+            margin: 0 auto;
+            margin: {
+                top: 10px;
+            }
+        }
+        }
+    }
+      label {
+      &.checkbox {
+          display: block;
+          text: {
+              align: center;
+          }
+      }
+    }
+        label {
+
+        &.date {
+           
+         
+            input {
+margin: {
+    top: 10px;
+}
+            }
+        }
+    }
+}
+}

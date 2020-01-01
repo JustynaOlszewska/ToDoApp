@@ -1,0 +1,144 @@
+div {
+
+&.todo {
+    h1 {
+           text: {
+            align: center;
+            }
+            border: {
+                bottom:{
+                   width: 1px;
+                style: solid;
+                color: black;   
+                }  
+            }
+       position:relative;
+        span {
+position: relative;
+top: 15px;
+background: {
+    color: #ffffff;
+}
+padding: 0 10px 0;
+        }  
+    }
+ ul {
+     list: {
+         style: {
+             type: none;
+         }
+        }
+  padding: 0 0 0 15px;
+     li{
+      
+         margin: {
+             bottom: 2px;
+         }
+         button {
+         &.rem {
+            border: {
+                width: 2px;
+              color: #5B249E;
+            }
+            border: {
+                radius: 5px;
+            }
+         }
+        }
+         button {
+
+         &.rem2 {
+            border: {
+                width: 2px;
+              color: #5B249E;
+            }
+            margin: {
+                left: 10px;
+            }
+            border: {
+                radius: 5px;
+            }
+         }          
+        }
+         span {
+
+         &.besidebutton {
+            display: inline-block;
+             width: 35%;
+margin: {
+    left: 10%;  
+    right: 5%; 
+}
+overflow-wrap: break-word;
+         }
+        }
+         span {
+
+         &.lastpart {
+          display: inline-block;
+width: 35%;
+text-align: left;
+
+         }
+     }
+    }
+ }
+    }
+}
+    @media (max-width: 426px) {
+        div {
+
+        &.todo {
+            h1 {
+                font: {
+                    size: 26px;
+                }
+            }
+            ul {
+                li {
+                    margin: {
+                        right: 5px;
+                       
+                    }
+                    span {
+                    &.besidebutton {          
+             width: 55%;
+    }  
+}
+    span {
+
+    &.lastpart {
+      display: inline-block;
+width: 100%;
+text-align: left;
+margin: {
+    bottom: 10px;
+}
+       }
+                }
+            }
+            }
+            
+        }
+      
+    }
+}
+    @media (max-width: 370px) {
+        div {
+
+        &.todo {
+            h1 {
+              span {
+                top: 12px;
+                top: 25px;
+            }  
+          
+            }
+            ul {
+                margin: {
+                    top: 40px;
+                }
+            }
+        }
+    }
+}

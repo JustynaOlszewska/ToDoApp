@@ -1,0 +1,75 @@
+div {
+
+&.wholepage {
+    font: {
+        family: 'Kulim Park', sans-serif;
+    }
+    position: absolute;
+    top:3%;
+    left: 50%;
+    transform: translateX(-50%);
+width: 90%;
+margin: {
+    bottom: 10px;
+}
+
+border: {
+    radius: 1%;
+}
+box-shadow: 0 0 18px grey;
+h1 {
+
+&.firstpart {
+    border: {
+        bottom: {
+             width: 1px;
+             style: solid;
+            color: #000; 
+        } 
+    }
+   margin-bottom: 30px;
+    position: relative;
+    text-align: center;
+
+ span {
+   background: #fff;
+    padding: 0 15px;
+    position: relative;
+   top: 15px;
+}
+}
+}
+}
+}
+@media (max-width: 426px) {
+    div {
+
+    &.wholepage {
+        h1 {
+
+        &.firstpart {
+            font: {
+            size: 26px;
+        } 
+        }
+       
+    }
+}
+}
+}
+@media (max-width:370px) {
+    div {
+
+    &.wholepage {
+       
+h1 {
+
+&.firstpart {
+    span {
+        top: 12px;
+    }
+}
+    }
+}
+}
+}

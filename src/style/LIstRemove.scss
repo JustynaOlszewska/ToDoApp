@@ -1,0 +1,188 @@
+
+div {
+&.remove {
+        h1 {
+               text: {
+                align: center;
+                }
+                border: {
+                    bottom:{
+                       width: 1px;
+                    style: solid;
+                    color: black;   
+                    }  
+                }
+           position:relative;
+            span {
+    position: relative;
+    top: 15px;
+    background-color: #ffffff;
+    padding: 0 10px 0;
+            }           
+        }
+        ul {
+            list-style-type: none;
+            padding: 0 0 0 15px;
+            li{
+
+                button.rem3 {
+                    border: {
+                        radius: 5px;
+                    }
+                    border: {
+                        width: 2px;
+                        color: #5B249E;
+                    }                  
+                }
+                span:nth-child(2) {
+                    display: inline-block;
+                    width: 35%;
+                    margin: {
+                        left: 17%;
+                    }
+                    overflow-wrap: break-word;
+                }
+                span:nth-child(4) {                 
+                   margin: {
+                        left: 14%;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+ @media (min-width: 1366px) {
+     div {
+     &.remove{
+         ul {
+             li {
+                span:nth-child(2) {
+                 
+                    margin: {
+                       right: 2%;
+                    }
+                  
+                }
+                  span:nth-child(4) {
+     
+         margin: {
+                     
+                    left:2%;
+                 }
+    } 
+             }
+         }
+        
+     }
+   
+ }
+}
+ @media (max-width: 1025px) {
+    div {
+
+    &.remove {
+        ul {
+            li {
+               
+               span:nth-child(3) {
+                   margin: {
+                       left: 12%;
+                       
+                   }
+               }
+               
+ span:nth-child(4) {
+       display: block;
+        margin: {
+                    bottom: 2%;
+                   right: 10px;
+                   left: 0;
+                }
+                text: {
+                    align: right;
+                }
+   }
+            }
+        }
+    }
+ 
+}
+ }
+ @media (max-width: 426px) {
+     div {
+
+     &.remove {
+       h1 {
+           font: {
+               size: 26px;
+           }
+       }
+         ul {
+             li {
+                span:nth-child(2) {
+                   
+                    width: 65%;
+                 
+                }
+                span:nth-child(3) {       
+                    text: {
+                        align: left;
+                    }          
+                    margin: {
+                        right: 5px;
+                        left: 2px;
+                    }
+                  display: block;
+                }
+                span:nth-child(4) {    
+                    text: {
+                        align: left;
+                    } 
+                overflow-wrap: break-word;   
+
+                            span {
+                             display: block;
+                    
+                      
+                            } 
+                  }
+             }
+         }
+     }
+ }
+}
+ @media (max-width: 370px) {
+    div {
+
+    &.remove {
+        h1 {
+          span {
+            top: 12px;
+        }  
+        }
+        ul {
+            margin: {
+                top: 30px;
+            }
+            li {
+               span:nth-child(4) {    
+                   display: block;
+                   width: 100%;
+            margin: {
+                right: 20px;
+                left: 0;
+            }
+                                span {
+                                   display: block;
+                                 width: 100%;  
+                                   
+                                } 
+    }  
+            }
+        }
+       
+}
+ }
+}
