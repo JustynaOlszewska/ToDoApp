@@ -1,4 +1,6 @@
-import React, { Component } from "react";
+import React, {
+  Component
+} from "react";
 import Header from "./Header.js";
 import ListToDo from "./ListToDo.js";
 import ListRemove from "./ListRemove.js";
@@ -6,28 +8,39 @@ import "./ListRemove.js";
 import "../style/App.scss";
 
 class App extends Component {
-  counter=4
+  counter = 4
   state = {
     text: "",
     checkbox: false,
     date: "",
-    listToDo: [
-      {
+    listToDo: [{
         id: 0,
-        todo: "Zrób wszystkie ramki",
+        todo: "Przykładowe zadania",
         priority: false,
-        date: "",
+        date: "2020-10-12",
         dateRemove: ""
       },
-      { id: 1, todo: "Zatankuj", priority: false, date: "", dateRemove: "" },
+      {
+        id: 1,
+        todo: "Zatankuj",
+        priority: false,
+        date: "2020-10-11",
+        dateRemove: ""
+      },
       {
         id: 2,
-        todo: "Znajdź pracę",
+        todo: "Zrób zadanie",
         priority: false,
-        date: "",
+        date: "2020-09-01",
         dateRemove: ""
       },
-      { id: 3, todo: "Kup książki", priority: false, date: "", dateRemove: "" }
+      {
+        id: 3,
+        todo: "Kup książki",
+        priority: false,
+        date: "2020-09-01",
+        dateRemove: ""
+      }
     ],
     changePlace: []
   };
@@ -49,11 +62,11 @@ class App extends Component {
     const restList = listToDo.filter(list => list.id !== id);
     this.setState({
       listToDo: restList
-   
+
     });
-       console.log(id)
+    console.log(id)
     const now = new Date();
-    const nowEverything = `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}   ${
+    const nowEverything = `${now.getFullYear()}-${now.getMonth()+1<10 ?"0"+(now.getMonth()+1) : now.getMonth()+1}-${now.getDate()<10 ? "0"+now.getDate(): now.getDate()}   ${
       now.getHours() < 10 ? "0" + now.getHours() : now.getHours()
     } : ${
       now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes()
@@ -71,7 +84,7 @@ class App extends Component {
             date: remove.date,
             dateRemove: nowEverything
           })
-          .sort(function(a, b) {
+          .sort(function (a, b) {
             return new Date(b.dateRemove) - new Date(a.dateRemove);
           })
           .reverse()
@@ -86,7 +99,7 @@ class App extends Component {
     this.setState({
       listToDo: index
     });
-  
+
   };
   handlButtonRemoveSecondList = id => {
     const changePlace = [...this.state.changePlace];
@@ -95,14 +108,14 @@ class App extends Component {
     this.setState({
       changePlace: index
     });
-   
+
   };
   handleSubmitForm = e => {
     e.preventDefault();
 
     const value = this.state.text;
     const listToDo = this.state.listToDo;
-this.counter++;
+    this.counter++;
     this.setState({
       listToDo: listToDo
         .concat({
@@ -111,35 +124,41 @@ this.counter++;
           priority: this.state.checkbox,
           date: this.state.date
         })
-        .sort(function(a, b) {
+        .sort(function (a, b) {
           return a.todo.localeCompare(b.todo);
         }),
-        text: ""
+      text: ""
     });
-   
+
   };
   render() {
-   
-    return (
-      <React.Fragment>
-       <div className="wholepage">
-        <h1 className="firstpart"><span>Zorganizuj sobie czas</span></h1>
-        <Header
-          checkbox={this.state.checkbox}
-          submit={this.handleSubmitForm}
-          change={this.handleInputChange}
-          state={this.state}
-        />
-        <ListToDo
-          place={this.handleButtonChangePlace}
-          take={this.handlButtonRemove}
-          listToDo={this.state.listToDo}
-        /> 
-        <ListRemove
-          take={this.handlButtonRemoveSecondList}
-          listRemove={this.state.changePlace}
-        />
-       </div>
+
+    return ( 
+    <React.Fragment>
+      <div className= "wholepage">
+      <h1 className= "firstpart"> <span> Zorganizuj sobie czas </span> </h1>
+      <Header 
+      checkbox = {this.state.checkbox}
+      submit = {this.handleSubmitForm}
+      change = {this.handleInputChange}
+      state = {this.state}/> 
+      <ListToDo 
+      place = {this.handleButtonChangePlace}
+      take = {
+        this.handlButtonRemove
+      }
+      listToDo = {
+        this.state.listToDo
+      }
+      />  <
+      ListRemove take = {
+        this.handlButtonRemoveSecondList
+      }
+      listRemove = {
+        this.state.changePlace
+      }
+      /> 
+      </div> 
       </React.Fragment>
     );
   }
